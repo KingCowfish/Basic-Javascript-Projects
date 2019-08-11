@@ -5,3 +5,4 @@ var C = C.fontcolor("purple");
 var D = D.fontcolor("yellow");
 document.write(A+B+C+D);    
 document.write(3+3)
+
