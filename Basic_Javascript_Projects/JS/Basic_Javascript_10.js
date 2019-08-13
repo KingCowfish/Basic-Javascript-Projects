@@ -58,32 +58,33 @@ function redrum(a, b) {
 }  
 document.write("<br>" + Q);
 
+window.onload = function(){
+    let Pet = {
+        species: "dog",
+        color: "tan and white",
+        name: "Karma",
+        diet: "kibble",
+        description : function() {
+            return "My pet " + this.name + ", is a " + this.color + " " + this.species + ".";
+        } 
+    };
+    document.getElementById("pet_object").innerHTML = Pet.description();
 
-let Pet = {
-    species: "dog",
-    color: "tan and white",
-    name: "Karma",
-    diet: "kibble",
-    description : function() {
-        return "My pet " + this.name + ", is a " + this.color + "" + this.species + ".";
-    } 
-};
-document.getElementById("pet_object").innerHTML = Pet.description();
+
+    var sent = "";
+    var i;
+    for(i = 0; i < 12; i++) {
+        if(i === 8) { break; }//break jumps out of a loop or a switch statement
+        sent += "Your number is " + i + "<br>";
+    }
+    document.getElementById("breakingb").innerHTML = sent;
 
 
-var sent = "";
-var i;
-for(i = 0; i < 12; i++) {
-    if(i === 8) { break; }//break jumps out of a loop or a switch statement
-    sent += "Your number is " + i + "<br>";
+    var words = "";
+    var p;
+    for (p = 3; p > 0; p--) {
+        if (p === 1) { continue; }//continue jumps over an iteration
+        words += "The number is " + p + "<br>";
+    }
+    document.getElementById("continueon").innerHTML = words;
 }
-document.getElementById("breakingb").innerHTML = sent;
-
-
-var words = "";
-var p;
-for (p = 3; p > 0; p--) {
-    if (p === 1) { continue; }//continue jumps over an iteration
-    words += "The number is " + p + "<br>";
-}
-document.getElementById("continueon").innerHTML = words;
